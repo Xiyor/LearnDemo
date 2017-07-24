@@ -1,0 +1,20 @@
+Dask Introduction
+
+单机版spark
+
+1. process data that doesn't fit into memory by breaking it into blocks and specifying task chains
+2. parallelize execution of tasks across cores and even nodes of a cluster
+3. move computation to the data rather than the other way around, to minimize communication overheads
+
+Dask is a graph execution engine 这一点有点像tensorflow
+
+
+1.dask.array.from_array(x, chunks = (100)): create a Dask array from a Numpy array
+
+2.dask.filter是对一个collection的过滤
+
+3.dask.map是对一个collection应用某个特定的函数
+
+4.dask处理的collection最好是数字型或者字符串型的简单类型，dask涉及进程间通信，需要处理的对象能够序列化
+
+5.dask对windows的支持不友好，最好在linux上运行
